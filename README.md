@@ -26,3 +26,21 @@ username: 'root',
 password: '',
 database: 'crib_hound',
 ```
+
+## Screenshots
+
+### Get Cribs Screen
+
+![My Image](screenshot/get.JPG)
+
+### Search Cribs Screen
+
+![My Image](screenshot/search.JPG)
+
+### Add Crib Popup
+
+![My Image](screenshot/add.JPG)
+
+### Update Crib Popup
+
+![My Image](screenshot/update.JPG)

@@ -51,32 +51,6 @@ The web app code structure are following below:
 1. React with Typescript
 2. .tsx extention
 3. Interface creation
-4. Data stores in the localStorage
-```
-
-### Functionalities
-
-The web app functionalities are following below:
-
-```
-1. Display a table that contains three fields:
-    a. "Student Name" (string),
-    b. "Score" (integer) and
-    c. "Class" (A/B/C)
-2. Create a record to the table
-3. Delete a record from the table
-4. Filter the records by score and class
-```
-
-### Additional Implementation
-
-The web app functionalities are following below:
-
-```
-1. To Implemented the Pagination of the list
-2. LocalStorage data retrive
-3. Popup box for add/filter student
-
 ```
 
 ### UI Design
@@ -90,17 +64,3 @@ The web app ui design are following below:
 4. Modal box for add and filter the student information
    (Popup box)
 ```
-
-## Screenshots
-
-### Student List
-
-![My Image](public/studentpage.JPG)
-
-### Student Add
-
-![My Image](public/studentadd.JPG)
-
-### Student Filter
-
-![My Image](public/studentfilter.JPG)
