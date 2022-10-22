@@ -1,28 +1,16 @@
 import React, { useState, useEffect } from "react";
 import Table from "../../components/UI/Table";
 import TableSearch from "../../components/UI/Table/TableSearch";
+import { Crib, FormCrib } from "../../interface/crib";
 import {
   getCribs,
   postCrib,
   updateCrib,
   removeCrib,
 } from "../../services/fetch";
-import ModalDD from "./ModalDD";
+import Modal from "./Modal";
 
-interface FormCrib {
-  name: string;
-  img: string;
-  location: string;
-}
-
-interface Crib {
-  id: number;
-  name: string;
-  img: string;
-  location: string;
-}
-
-interface State {
+export interface State {
   cribs: Crib[];
   loading: boolean;
 }
@@ -85,17 +73,17 @@ export default function Home() {
     return true;
   };
 
+  const handleEdit = async (crib: Crib) => {
+    setForm((s: FormCrib) => ({ ...s, ...crib }));
+    setShowModal(true);
+  };
+
   const submitForm = async (id: string) => {
     if (await isValidation()) {
       if (id) await updateCrib(id, form).then(() => initialStart());
       else await postCrib(form).then(() => initialStart());
       handleCloseModal();
     }
-  };
-
-  const handleEdit = async (crib: Crib) => {
-    setForm((s: FormCrib) => ({ ...s, ...crib }));
-    setShowModal(true);
   };
 
   const handleDelete = async (id: string) => {
@@ -118,7 +106,7 @@ export default function Home() {
               setShowModal={setShowModal}
             />
 
-            <ModalDD
+            <Modal
               data={form}
               showModal={showModal}
               errors={errors}

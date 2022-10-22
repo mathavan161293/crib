@@ -1,19 +1,13 @@
+import { Crib } from "../../../interface/crib";
 import Badge from "../Badge/Badge";
 import TableBody from "./TableBody";
 import TableHead from "./TableHead";
 
 interface TableProps {
-  cribs: any;
+  cribs: Crib[];
   search: string;
   handleEdit: any;
   handleDelete: any;
-}
-
-interface Crib {
-  id: number;
-  name: string;
-  img: string;
-  location: string;
 }
 
 export default function Table({

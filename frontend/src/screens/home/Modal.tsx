@@ -10,7 +10,7 @@ interface ModalProps {
   handleCloseModal: () => void;
 }
 
-export default function ModalDD({
+export default function Modal({
   data,
   showModal,
   handleChange,
@@ -28,7 +28,7 @@ export default function ModalDD({
       <div className="flex items-center min-h-screen px-4 py-8">
         <div className="relative w-full max-w-lg p-4 mx-auto bg-white rounded-md shadow-lg">
           <h2 className="text-center text-xl font-bold text-gray-700 mb-3">
-            Create Crib
+            {data.id ? "Update" : "Create"} Crib
           </h2>
           <Input
             label="Name"
